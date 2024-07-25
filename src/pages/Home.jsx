@@ -14,10 +14,46 @@ import InstructorSection from "../components/core/HomePage/InstructorSection"
 import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection"
 import TimelineSection from "../components/core/HomePage/Timeline"
 import ReviewSlider from "../components/Common/ReviewSlider"
-
+import { IoWarning } from "react-icons/io5";
+import { useEffect, useState } from "react"
+import { GrFormClose } from "react-icons/gr";
 function Home() {
+  const [showElement,setShowElement] = useState(true);
+  useEffect(()=>{
+    setTimeout(function() {
+      setShowElement(false)
+         }, 14000);
+       },[])
+
   return (
-    <div>
+    <div className ="relative">
+      {/* warning */}
+    <div className="transition-all duration-200 mx-auto absolute right-0 top-0">
+      {
+        showElement ? 
+        <div>
+        
+        <div className="flex mx-auto text-blue-100 text-sm font-semibold bg-richblack-400 p-3 w-[300px] rounded-md justify-center" >
+        
+          <div className="text-yellow-50">
+            <IoWarning fontSize={24}/>
+          </div>
+          
+          <p>This website is using free hosting and that may lead to Database not responding fast enough :( <br/>Please wait for about 12-15 seconds before accessing the website
+          !!</p>
+
+          <div className="text-richblack-5 cursor-pointer"
+          onClick={()=>{
+            setShowElement(false)
+          }}>
+          <GrFormClose fontSize={16}/>
+          </div>
+        </div>
+        </div>
+         :
+        <></>
+      }
+    </div>
       {/* Section 1 */}
       <div className="relative mx-auto flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 text-white">
         {/* Become a Instructor Button */}
