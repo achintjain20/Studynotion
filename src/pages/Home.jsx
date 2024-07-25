@@ -28,7 +28,7 @@ function Home() {
   return (
     <div className ="relative">
       {/* warning */}
-    <div className="transition-all duration-200 mx-auto absolute right-0 top-0">
+    <div className="transition-all duration-200 mx-auto absolute right-0 top-0 z-10">
       {
         showElement ? 
         <div>
