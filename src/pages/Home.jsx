@@ -28,12 +28,12 @@ function Home() {
   return (
     <div className ="relative">
       {/* warning */}
-    <div className="transition-all duration-200 mx-auto absolute right-0 top-0 z-10">
+    <div className="transition-all duration-200 mx-auto fixed right-10 top-15 z-10">
       {
         showElement ? 
-        <div>
+        <div className="text-white h-fit code-border flex flex-row py-3 text-[10px] sm:text-sm leading-[18px] sm:leading-6 relative w-[100%] lg:w-[300px]">
         
-        <div className="flex mx-auto text-blue-100 text-sm font-semibold bg-richblack-400 p-3 w-[300px] rounded-md justify-center" >
+        <div className="flex mx-auto text- text-sm font-semibold  p-3 w-[300px] rounded-md justify-center" >
         
           <div className="text-yellow-50">
             <IoWarning fontSize={24}/>
