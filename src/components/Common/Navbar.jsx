@@ -189,7 +189,7 @@ import { BsChevronDown } from "react-icons/bs";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { ACCOUNT_TYPE } from "../../utils/constants";
 import useOnClickOutside from "../../hooks/useOnClickOutside";
-
+import { FaGithub } from "react-icons/fa";
 const Navbar = () => {
   const ref = useRef(null);
   const { token } = useSelector((state) => state.auth);
@@ -326,6 +326,12 @@ const Navbar = () => {
                 </button>
               </Link>
             )}
+            {/* github  */}
+            <div className="absolute right-3 text-richblack-5 hover:scale-125 transition-all duration-200 hover:text-richblue-300">
+              <a href="https://github.com/achintjain20/" target="blank">
+              <FaGithub fontSize={24}/>
+              </a>
+            </div>
             {token !== null && <ProfileDropdown />}
           </div>
           </div>
@@ -454,6 +460,12 @@ const Navbar = () => {
                     </button>
                   </Link>
                 )}
+                {/* github  */}
+                <div className="absolute right-4 text-richblack-5 hover:scale-125 transition-all duration-200">
+                  <a href="https://github.com/achintjain20/" target="blank">
+                  <FaGithub fontSize={24}/>
+                  </a>
+                </div>
                 {token !== null && <ProfileDropdown isMobile={isMobile} />}
               </div>
             </div>
