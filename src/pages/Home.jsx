@@ -16,13 +16,13 @@ import TimelineSection from "../components/core/HomePage/Timeline"
 import ReviewSlider from "../components/Common/ReviewSlider"
 import { IoWarning } from "react-icons/io5";
 import { useEffect, useState } from "react"
-import { GrFormClose } from "react-icons/gr";
+import { RxCross2 } from "react-icons/rx";
 function Home() {
   const [showElement,setShowElement] = useState(true);
   useEffect(()=>{
     setTimeout(function() {
       setShowElement(false)
-         }, 14000);
+         }, 15000);
        },[])
 
   return (
@@ -39,14 +39,15 @@ function Home() {
             <IoWarning fontSize={24}/>
           </div>
           
-          <p>This website is using free hosting and that may lead to Database not responding fast enough :( <br/>Please wait for about 12-15 seconds before accessing the website
+          <p>This website is using free hosting and that may lead to Database not responding fast enough :( <br/>Please wait for about 20-23 seconds before accessing the website
           !!</p>
 
-          <div className="text-richblack-5 cursor-pointer"
+          <div className="text-richblack-5 absolute cursor-pointer hover:text-pink-600 transition-all duration-200 top-1 right-1 "
           onClick={()=>{
             setShowElement(false)
           }}>
-          <GrFormClose fontSize={16}/>
+
+          <RxCross2 fontSize={18}/>
           </div>
         </div>
         </div>
